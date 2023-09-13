@@ -1,0 +1,107 @@
+@import '../sass/mixins.scss';
+@import '../Sass/variables';
+
+
+
+.navbar-brand{
+    @include extra_small_devices{
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+.navbar {
+    margin-top: 35px;
+    @include extra_small_devices{
+        padding: 5px;
+        margin-top: 30px!important;
+    }
+
+    .sidebar {
+        @include extra_small_devices {
+            background-color: #ffffff;
+            width: 80%;
+           
+        }
+    }
+
+    @include extra_small_devices {
+        margin-top: 10px;
+    }
+
+    .navbar-toggler {
+
+        border: 1px solid rgb(211, 211, 211);
+            box-shadow: none !important;
+        
+
+
+        &:focus {
+            border: 1px solid rgb(211, 211, 211);
+            box-shadow: none !important;
+        }
+    }
+
+    .navbar-nav{
+        @include extra_small_devices{
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            margin-top: 30%;
+ 
+        }
+        .nav-item{
+            @include extra_small_devices{
+                padding-top: 20px;
+            }
+        }
+        .link-name{
+            @include extra_small_devices{
+                font-size: 16px;
+
+                
+            }
+        }
+    }
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.nav-item {
+    padding-left: 2.1rem;
+
+}
+
+.link-name {
+    opacity: .80;
+
+    .active {
+        opacity: 1;
+    }
+}
+
+
+.md {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 100%;
+    text-align: center;
+    padding: 8px;
+    font-weight: 700;
+
+}
+
+.zarak {
+    font-weight: 700;
+    color: #4e4e4e;
+}
+
+.khan {
+    font-weight: 400;
+    color: #222222;
+}

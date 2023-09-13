@@ -1,0 +1,80 @@
+@import '../Sass/mixins.scss';
+
+.filter-gallery {
+    @include large_devices_laptops {
+        text-align: end !important;
+    }
+
+    @include extra_small_devices {
+        text-align: center;
+    }
+
+    @include medium_devices_tablets {
+        text-align: center;
+    }
+
+
+    .filter-buttons {
+        margin-bottom: 20px;
+
+    }
+
+    .filter-buttons .btn {
+        color: rgb(117, 117, 117);
+        font-size: 13px;
+
+        &:active,
+            &:focus,
+            &.selected {
+                font-weight: bold;
+                color: black;
+            }
+
+        @include extra_small_devices {
+            padding: 4px;
+
+        }
+    }
+
+    .image-grid {
+        display: grid;
+
+        @include medium_devices_tablets {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))!important;
+        }
+
+        /* Adjust column width as needed */
+
+
+        @include small_devices {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+
+        @include extra_small_devices {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        overflow: hidden;
+
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: 0.5s ease all;
+        &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+    }
+}

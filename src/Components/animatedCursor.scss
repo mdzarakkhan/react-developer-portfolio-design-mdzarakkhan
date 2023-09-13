@@ -1,0 +1,13 @@
+@import '../Sass/variables';
+.cursor__dot div {
+    z-index: 999999 !important;
+}
+
+.cursor__dot div:last-child {
+    background-color: $secondary-color !important;
+}
+
+.cursor__dot div:first-child {
+    filter: invert(1);
+    background-color: rgba(255, 255, 255, 0.432) !important;
+}

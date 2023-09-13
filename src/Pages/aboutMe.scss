@@ -1,0 +1,160 @@
+ @import '../Sass/variables';
+ @import '../Sass/mixins.scss';
+
+ #main-section {
+   
+
+
+
+     // --------------------------------page container------------------------------------------
+     .page-container {
+
+
+         #hero {
+
+
+             .my-dp-Pdiv {
+
+
+
+                 @include extra_small_devices {
+                     display: flex;
+                     justify-content: center;
+
+                 }
+
+                 .my-dp {
+
+                     transition: 1s ease all;
+                     width: 92%;
+                     border-radius: 50%;
+                     border: 1px solid $secondary-color;
+                     position: inherit;
+                     top: 60px;
+                     margin-bottom: 10px;
+                     margin-top: 40px;
+                     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+                     padding: 15px;
+
+                     &:hover {
+                         transform: scale(1.1);
+                     }
+
+                     @include extra_small_devices {
+                         margin-top: -0.7rem;
+                         width: 70%;
+                     }
+
+                 }
+             }
+
+
+             .about-content {
+                 .name {
+                     @include large_devices_laptops {
+                         font-size: 48px;
+
+                     }
+                 }
+
+                 .btns {
+                     @include extra_small_devices {
+                         display: flex;
+                         justify-content: center;
+                     }
+                 }
+
+                 @include large_devices_laptops {
+                     margin-top: 7rem;
+
+                 }
+
+                 @include extra_small_devices {
+                     margin-top: 2rem;
+                 }
+
+                 .tagline {
+                     text-align: center;
+                 }
+
+                 .name {
+                     @include extra_small_devices {
+                         font-size: 40px;
+                         text-align: center;
+                     }
+                 }
+             }
+         }
+
+         // --------------------------------about section------------------------------------------
+         #about-me {
+             margin-top: 4.5rem;
+         }
+
+         // --------------------------------what i do ------------------------------------------
+         #section-what-i-do {
+
+
+
+
+             .icon-box {
+                 h4 {
+                     margin-left: 1.2rem;
+                 }
+
+                 p {
+                     margin-left: 2.5rem;
+                 }
+             }
+
+             .icon-box i {
+                 font-size: 18px;
+
+             }
+         }
+
+
+
+
+         // --------------------------------skills ------------------------------------------
+
+         #skills-section {
+
+
+             .skills-svg img {
+                 margin-right: 10px;
+                 border-right: rgb(226, 226, 226) 1px solid;
+                 transition: .5s ease all;
+                 cursor: pointer;
+
+                 &:hover {
+                     transform: scale(1.1);
+                 }
+
+                 @include extra_small_devices {
+                     width: 25px !important;
+                     height: 25px !important;
+                 }
+             }
+
+
+             .links-section {
+                 @include extra_small_devices {
+                     margin-top: 2rem;
+                 }
+
+                 @include small_devices {
+                     margin-top: 2rem;
+                 }
+             }
+         }
+
+
+
+
+
+
+
+         // --------------------------------parent brackets, code before these------------------------------------------
+     }
+ }

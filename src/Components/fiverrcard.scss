@@ -1,0 +1,41 @@
+@import '../Sass/variables';
+
+.plan-name {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #464c50;
+    font-family: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.7px;
+  
+}
+
+.card {
+    border: 1px solid $primary-color;
+    border-radius: 7px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.04), 0 3px 6px 0 rgba(0, 0, 0, 0.01);
+
+}
+/* Apply a transition for smooth animations */
+.animate {
+    transition: transform 0.3s ease;
+}
+
+/* Define the initial state of the div */
+.animate {
+    transform: translateY(0);
+}
+
+/* Apply slide-up animation on hover */
+.animate:hover {
+    transform: translateY(-3px);
+    /* Slide up effect */
+}
+
+.animate {
+    cursor: pointer;
+
+    &:hover {
+        transition: .5s ease all;
+    }
+}

@@ -1,0 +1,94 @@
+@import '../Sass/variables';
+@import '../Sass/mixins.scss';
+
+.card-section {
+
+    .card {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.04), 0 3px 6px 0 rgba(0, 0, 0, 0.01);
+        border-right: 1px #dde0e2 solid;
+        border-radius: 40px 5px 0 0;
+        position: relative;
+        background-color: white;
+        color: #56575b;
+        margin: 5px 0;
+        border-color: rgb(241, 241, 241);
+        cursor: pointer;
+        border: 1px solid $primary-color;
+
+        /* Apply a transition for smooth animations */
+        .animate {
+            transition: transform 0.3s ease;
+        }
+
+        /* Define the initial state of the div */
+        .animate {
+            transform: translateY(0);
+        }
+
+        /* Apply slide-up animation on hover */
+        .animate:hover {
+            transform: translateY(-3px);
+            /* Slide up effect */
+        }
+
+        .animate {
+            cursor: pointer;
+
+            &:hover {
+                transition: .5s ease all;
+            }
+
+        }
+            .plan-name {
+                padding: 15px 0;
+                border-bottom: 1px #eff0f2 solid;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 13px;
+                color: #464c50;
+                font-family: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                letter-spacing: 1px;
+            }
+
+            .plan-description {
+                padding: 15px;
+                line-height: normal;
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+            .plan-price sub {
+                text-transform: none;
+                font-size: 16px;
+                bottom: 0;
+            }
+
+            .plan-price {
+                color: #56575b;
+                font-family: "Open sans";
+                font-size: 34px;
+                text-transform: uppercase;
+                line-height: 50px;
+            }
+
+            sub {
+                font-size: 75%;
+                line-height: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+
+            .plan-description.specs {
+                min-height: 150px;
+                line-height: 20px;
+
+                @include extra_small_devices {
+                    min-height: 180px;
+                }
+            }
+
+
+
+
+        }
+    }

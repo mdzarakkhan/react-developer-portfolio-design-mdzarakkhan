@@ -1,0 +1,88 @@
+@import '../Sass/mixins.scss';
+
+
+//-------------------------------------contact container---------------------------------------- 
+
+
+.contact-container {
+    margin-top: 2rem;
+    padding: 50px 0px 50px 0px;
+    border-top: 2px solid rgb(241, 241, 241);
+    border-bottom: 2px solid rgb(241, 241, 241);
+    margin-bottom: 3rem;
+
+    p {
+        margin-top: -2rem;
+    }
+
+    .contact {
+        @include extra_small_devices {
+            font-size: 36px !important;
+        }
+    }
+
+
+}
+
+
+
+//-------------------------------------contact-section----------------------------------------
+#contact {
+    .success-message {
+        color: green;
+    }
+
+    .error-message {
+        color: red;
+    }
+
+    .secondary-button {
+        margin-left: 0;
+    }
+
+    .form-control {
+        border: 2px solid rgb(204, 204, 204);
+    }
+
+    .what-i-do {
+        @include extra_small_devices {
+            margin-top: 1rem;
+        }
+    }
+
+    .icon-box {
+        h4 {
+            margin-left: 1.2rem;
+        }
+
+        p {
+            margin-left: 2.2rem;
+        }
+    }
+
+    .icon-box i {
+        font-size: 18px;
+
+    }
+
+    .skills-svg img {
+        margin-right: 4px;
+        border-right: rgb(226, 226, 226) 1px solid;
+        transition: .5s ease all;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @include extra_small_devices {
+            width: 33px !important;
+            height: 33px !important;
+        }
+    }
+
+    .links-section {
+        @include extra_small_devices {
+            margin-top: 2rem;
+        }
+    }
+}

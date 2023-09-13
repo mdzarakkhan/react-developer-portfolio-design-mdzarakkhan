@@ -1,0 +1,60 @@
+@import '../Sass/mixins.scss';
+@import '../Sass/mixins.scss';
+
+.contact-container {
+    margin-top: 2rem;
+    padding: 50px 0px 50px 0px;
+    border-top: 2px solid rgb(241, 241, 241);
+    border-bottom: 2px solid rgb(241, 241, 241);
+    margin-bottom: 3rem;
+}
+
+.education {
+    .experience {
+
+        @include extra_small_devices {
+            margin-top: 2rem;
+        }
+
+    }
+}
+
+.certificates {
+
+    /* Apply a transition for smooth animations */
+    .animate {
+        transition: transform 0.3s ease;
+    }
+
+    /* Define the initial state of the div */
+    .animate {
+        transform: translateY(0);
+    }
+
+    /* Apply slide-up animation on hover */
+    .animate:hover {
+        transform: translateY(-3px);
+        /* Slide up effect */
+    }
+
+    .animate {
+        cursor: pointer;
+
+        &:hover {
+            transition: .5s ease all;
+        }
+    }
+
+    .codeprisma-margin {
+
+
+        @include small_devices {
+            margin-top: 1rem;
+        }
+
+        @include extra_small_devices {
+            margin-top: 1rem;
+        }
+    }
+
+}
