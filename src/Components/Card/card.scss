@@ -1,5 +1,5 @@
-@import '../Sass/variables';
-@import '../Sass/mixins.scss';
+@import '../../Sass/variables';
+@import '../../Sass/mixins.scss';
 
 .card-section {
 
@@ -43,11 +43,12 @@
                 padding: 15px 0;
                 border-bottom: 1px #eff0f2 solid;
                 text-align: center;
-                text-transform: uppercase;
-                font-size: 13px;
-                color: #464c50;
-                font-family: "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-                letter-spacing: 1px;
+                font-size: 15px;
+                color: #ffffff;
+                font-family: 'Poppins';
+                font-weight: 500;
+                background-color: $secondary-color;
+                border-radius: 20px 5px 0 0;
             }
 
             .plan-description {
@@ -61,14 +62,16 @@
                 text-transform: none;
                 font-size: 16px;
                 bottom: 0;
+                color: #2b2b2b;
             }
 
             .plan-price {
-                color: #56575b;
+                color: $secondary-color;
                 font-family: "Open sans";
                 font-size: 34px;
                 text-transform: uppercase;
                 line-height: 50px;
+                font-family: 'Poppins';
             }
 
             sub {

@@ -1,29 +1,11 @@
 import React from 'react';
-import Header from '../Components/Header';
-import Card from '../Components/Card';
 import './aboutMe.scss';
-import cv from '../assets/Files/Muhammad Zarak Resume.pdf';
-import html from '../assets/svg/html-5.svg';
-import css from '../assets/svg/css-3.svg';
-import sass from '../assets/svg/sass.svg';
-import bootstrap from '../assets/svg/bootstrap.svg';
-import js from '../assets/svg/js.svg';
-import wordpress from '../assets/svg/wordpress.svg';
-import reactjs from '../assets/svg/reactjs.svg';
-import git from '../assets/svg/git.svg';
-import github from '../assets/svg/github.svg';
-import fiverr from '../assets/svg/fiverr.svg';
-import upwork from '../assets/svg/upwork.svg';
-import linkedin from '../assets/svg/linkedin.svg';
-import twitter from '../assets/svg/twitter.svg';
-import whatsapp from '../assets/svg/whatsapp.svg';
-import facebook from '../assets/svg/facebook.svg';
-import instagram from '../assets/svg/instagram.svg';
-import Footer from '../Components/Footer';
-import { Link } from 'react-router-dom';
-import FiverrCard from '../Components/FiverrCard';
+import { Header, Card, Footer, FiverrCard } from '../../Components/index.js';
+import cv from '../../assets/Files/Muhammad Zarak Resume.pdf';
+import { html, css, sass, bootstrap, js, wordpress, reactjs, git, github, fiverr, upwork, linkedin, twitter, whatsapp, facebook, instagram } from '../../assets/svg/index.js';
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
+import Typewriter from '../../Components/Typewriter/Typewriter.jsx';
 
 
 const AboutMe = () => {
@@ -33,7 +15,7 @@ const AboutMe = () => {
     <>
       {/* -------------------------------------SEO---------------------------------------- */}
       <Helmet>
-       
+
         <title>Modern Web Design Services by Freelance Website Designer | Md Zarak Khan</title>
 
         <meta name="description"
@@ -43,7 +25,12 @@ const AboutMe = () => {
           content="web design, stunning websites, modern web design, professional web design, web designer, Web Design Services by Freelance Website Designer, Md Zarak Khan, Web development, Online presence, Expert services, Transform ideas, Stunning websites, Md Zarak Khan, Web design, Website creation, Digital presence, Professional web development, web designer in mardan, web designer near me, mdzarakkhan" />
       </Helmet>
 
-      <section id="main-section">
+      <motion.section id="main-section"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+
+      >
 
         {/* -------------------------------------header---------------------------------------- */}
         <div className="row">
@@ -67,8 +54,8 @@ const AboutMe = () => {
                 animate={{ opacity: 1, scale: 1 }}   // Animation styles
                 transition={{ duration: 0.8 }}       // Animation duration
 
-                className="col-lg-5 col-md-6  mt-5 my-dp-Pdiv">
-                <img className="img-fluid rounded-circle my-dp" src='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/profile' alt="mdzarakkhan" />
+                className="col-lg-5 col-md-6 mt-5 my-dp-Pdiv">
+                <img className="img-fluid rounded-circle my-dp" src='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/profile-2' alt="mdzarakkhan" />
               </motion.div>
 
               <div className="col-lg-7 col-md-12 d-flex flex-column justify-content-center mt-lg-5 mt-md-4 mt-sm-5 about-content">
@@ -76,13 +63,13 @@ const AboutMe = () => {
                   initial={{ scale: 0.8, opacity: 0 }}   // Initial scale and opacity
                   animate={{ scale: 1, opacity: 1 }}     // Animation scale and opacity
                   transition={{ duration: 0.8 }}
-                  className='text-lg-start text-md-center text-sm-center tagline' style={{ color: '#AAAAAA', fontWeight: '300' }}>Mern Stack Developer</motion.h4>
+                  className='text-lg-start text-md-center text-sm-center type-writer'><Typewriter /></motion.h4>
                 <motion.h1
                   initial={{ scale: 0.8, opacity: 0 }}   // Initial scale and opacity
                   animate={{ scale: 1, opacity: 1 }}     // Animation scale and opacity
                   transition={{ duration: 0.8 }}         // Animation duration
-                  className='name text-lg-start text-md-center text-sm-center' style={{ fontWeight: '600' }}>
-                  <span style={{ color: '#4C9196' }}>Md</span> Zarak Khan</motion.h1>
+                  className='name text-lg-start text-md-center text-sm-center' >
+                  <span style={{ color:'#10B981'}}>Md</span> Zarak Khan</motion.h1>
                 <motion.p
                   initial={{ scale: 0.8, opacity: 0 }}   // Initial scale and opacity
                   animate={{ scale: 1, opacity: 1 }}     // Animation scale and opacity
@@ -96,19 +83,21 @@ const AboutMe = () => {
                   animate={{ scale: 1, opacity: 1 }}     // Animation scale and opacity
                   transition={{ duration: 0.5 }}         // Animation duration
 
-                  className='btns text-lg-start text-md-center text-sm-center' style={{ marginTop: '.7rem' }}>
+                  className='btns text-lg-start text-md-center text-sm-center mt-4' style={{ marginTop: '.7rem' }}>
                   <a href={cv}>
                     <button className="btn primary-button">
                       Download CV<i className="fa-solid fa-download"></i>
                     </button>
                   </a>
-                  <Link to='/portfolio' className="btn secondary-button portfolio">
-                    Portfolio<i className="fa-solid fa-arrow-up-right-from-square"></i>
-                  </Link>
+                  <a href='https://mdzarakkhan.me/blog' className="btn secondary-button portfolio">
+                    Blog<i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
 
                 </motion.div>
 
               </div>
+
+
             </div>
           </div>
 
@@ -129,50 +118,63 @@ const AboutMe = () => {
             </div>
           </section>
 
-          {/* ------------------------------what i do section------------------------------------------ */}
-          <section id='section-what-i-do'>
-            <div className='block-title'>
-              <h2>What I Do</h2>
+          {/* ------------------------------services section------------------------------------------ */}
+          <section id='section-services' className='pb-5'>
+
+            <div className="container">
+              <div className="row pt-3">
+                <div className=' d-flex justify-content-center'>
+                  <div className='col-lg-4 col-md-12 col-sm-12'>
+                    <div>
+                      <i style={{ color: 'white', fontSize: '30px' }} className="fa-solid fa-gear d-block text-center pb-3"></i>
+                      <h2 style={{ color: 'white' }} className='d-block text-center pb-3'>My Services</h2>
+                      <p style={{ color: 'white' }} className='d-block text-center pb-3'> Here are some of the services I provide, if you need any service that is not included, feel free to contact</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
             <div className="container">
               <div className="row">
 
-                <div className='col-lg-6 col-12 p-lg-0'>
-                  <div className='icon-box'>
-                    <i className="fa-solid fa-code"></i>
-                    <h4 className='d-inline-block'>Web Design/Development</h4>
-                    <p>Md Zarak Khan offers professional Web Design & Development services, combining artistic flair and technical expertise to create visually stunning and interactive websites tailored to meet clients' needs and goals.</p>
+                <div className='col-lg-3 col-md-6 col-sm-12 p-2 '>
+                  <div className='icon-box p-4'>
+                    <i className="fa-solid fa-code d-block text-center mb-3"></i>
+                    <h4 style={{ fontSize: '19px', fontFamily: 'Poppins', fontWeight: '500' }} className='d-block text-center p-2'>Website Design</h4>
+                    <p style={{ fontSize: '15px' }} className='text-center m-0'>Design any type of website, like business, portfolio, blog and much more</p>
                   </div>
                 </div>
 
-                <div className='col-lg-6 col-12 p-lg-0'>
-                  <div className='icon-box'>
-                    <i className="fa-solid fa-shield-halved"></i>
-                    <h4 className='d-inline-block'>Security/Malware</h4>
-                    <p> I provide robust solutions to safeguard websites and systems, fortifying digital assets against potential threats and ensuring a safe online environment for businesses and users.</p>
+                <div className='col-lg-3 col-md-6 col-sm-12 p-2 '>
+                  <div className='icon-box p-4'>
+                    <i className="fa-solid fa-shield-halved d-block text-center mb-3"></i>
+                    <h4 style={{ fontSize: '19px', fontFamily: 'Poppins', fontWeight: '500' }} className='d-block text-center p-2'>Security/Malware</h4>
+                    <p style={{ fontSize: '15px' }} className='text-center m-0'>Secure your website from brute force attacks and malwares.</p>
                   </div>
                 </div>
+
+                <div className='col-lg-3 col-md-6 col-sm-12 p-2 '>
+                  <div className='icon-box p-4'>
+                    <i className="fa-solid fa-gauge d-block text-center mb-3"></i>
+                    <h4 style={{ fontSize: '19px', fontFamily: 'Poppins', fontWeight: '500' }} className='d-block text-center p-2'>Speed Optimization</h4>
+                    <p style={{ fontSize: '15px' }} className='text-center m-0'>Optimize your website to load much faster than before.</p>
+                  </div>
+                </div>
+
+                <div className='col-lg-3 col-md-6 col-sm-12 p-2 '>
+                  <div className='icon-box p-4'>
+                    <i className="fa-solid fa-shop d-block text-center mb-3"></i>
+                    <h4 style={{ fontSize: '19px', fontFamily: 'Poppins', fontWeight: '500' }} className='d-block text-center p-2'>Ecommerce</h4>
+                    <p style={{ fontSize: '15px' }} className='text-center m-0'>Build any kind of ecommerce website using woocommerce.</p>
+                  </div>
+                </div>
+
               </div>
 
-              <div className="row mt-3">
-                <div className='col-lg-6 col-12 p-lg-0'>
-                  <div className='icon-box'>
-                    <i className="fa-solid fa-gauge"></i>
-                    <h4 className='d-inline-block'>Speed Optimization</h4>
-                    <p>Experience enhanced performance with my Website Speed Optimization service, optimizing loading times and overall responsiveness for a seamless user experience and improved search engine rankings.</p>
-                  </div>
-                </div>
 
-                <div className='col-lg-6 col-sm-12 p-lg-0'>
-                  <div className='icon-box'>
-                    <i className="fa-solid fa-shop"></i>
-                    <h4 className='d-inline-block'>Ecommerce</h4>
-                    <p>Boost your online business with expertly designed and developed eCommerce websites, tailored to showcase products, streamline transactions, and provide a secure shopping experience for customers.</p>
-                  </div>
-                </div>
 
-              </div>
 
 
             </div>
@@ -186,38 +188,34 @@ const AboutMe = () => {
             </div>
 
             {/* gigs */}
+
             <div className="container p-lg-0">
               <div className="row">
 
-                <div className='col-lg-3 col-md-6 col-sm-12'>
+                <div className='col-lg-4 col-md-6 col-sm-12 pt-2'>
                   <FiverrCard
-                    FiverrCardUrl='https://www.fiverr.com/md_zarak_khan/portfolio-wordpress-website-website-in-12-hour-personal-portfolio?context_referrer=user_page&ref_ctx_id=4033d8da85ff9322b65d90a5a23e7d9f&pckg_id=1&pos=1&seller_online=true&imp_id=201b6ff5-82a3-431a-869c-7bece0bc50a1'
+                    FiverrCardUrl='https://www.fiverr.com/s/o24lP8'
+                    FiverrCardImage='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Fiverr-Gig-Images/elementor%20pro%20expert'
+                    FiverrCardTitle='Elementor Pro Expert'
+                  />
+                </div>
+
+                <div className='col-lg-4 col-md-6 col-sm-12 pt-2'>
+
+                  <FiverrCard
+                    FiverrCardUrl='https://www.fiverr.com/s/Ygl2Bz'
                     FiverrCardImage='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Fiverr-Gig-Images/fiverr_portfolio'
                     FiverrCardTitle='Portfolio/Business Website'
                   />
+
                 </div>
 
-                <div className='col-lg-3 col-md-6 col-sm-12'>
-                  <FiverrCard
-                    FiverrCardUrl='https://www.fiverr.com/md_zarak_khan/fix-wordpress-hacked-website-clean-malware-virus-malwares-fix-mdzarakkhan?context_referrer=user_page&ref_ctx_id=4033d8da85ff9322b65d90a5a23e7d9f&pckg_id=1&pos=10&seller_online=true&imp_id=6e01de00-9511-49b1-a455-3e42ad1e2c48'
-                    FiverrCardImage='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Fiverr-Gig-Images/fiverr_malware'
-                    FiverrCardTitle='Malware Removal'
-                  />
-                </div>
 
-                <div className='col-lg-3 col-md-6 col-sm-12'>
-                  <FiverrCard
-                    FiverrCardUrl='https://www.fiverr.com/md_zarak_khan/full-website-full-wordpress-website-elementor-wordpress-20-hours?context_referrer=user_page&ref_ctx_id=4033d8da85ff9322b65d90a5a23e7d9f&pckg_id=1&pos=5&seller_online=true&imp_id=78da4302-0dc7-4fbc-ba16-96d48e7978e1'
-                    FiverrCardImage='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Fiverr-Gig-Images/fiverr_ecommerce'
-                    FiverrCardTitle='Design eCommerce Stores'
-                  />
-                </div>
-
-                <div className='col-lg-3 col-md-6 col-sm-12'>
+                <div className='col-lg-4 col-md-6 col-sm-12 pt-2'>
                   <FiverrCard
                     FiverrCardUrl='https://www.fiverr.com/md_zarak_khan/customization-customize-update-wordpress-fix-wordpess-change-wordpress-update?context_referrer=user_page&ref_ctx_id=4033d8da85ff9322b65d90a5a23e7d9f&pckg_id=1&pos=2&seller_online=true&imp_id=f0f72072-8046-47e9-ad3c-4c103de7afcc'
-                    FiverrCardImage='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Fiverr-Gig-Images/fiverr_customization'
-                    FiverrCardTitle='Issues fix/customization'
+                    FiverrCardImage='https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Fiverr-Gig-Images/blog%20website'
+                    FiverrCardTitle='Design a Blog Website'
                   />
                 </div>
               </div>
@@ -269,7 +267,7 @@ const AboutMe = () => {
                     name='Speed Optimization'
                     price='$50'
                     time='/website'
-                    description='Maximizing website performance through speed optimization techniques.'
+                    description='Maximizing website performance through speed optimization.'
                     line1='Core Web Vitals Fixed'
                     line2='Css & JS files Minification'
                     line3='Images Optimization'
@@ -285,7 +283,7 @@ const AboutMe = () => {
                     name='Web Security'
                     price='$30'
                     time='/website'
-                    description='Safeguarding websites from threats with expert security/malware solutions.'
+                    description='Safeguarding websites from threats with expert security solutions.'
                     line1='Malware Removal'
                     line2='Login URL Change'
                     line3='Database Prefix Change'
@@ -320,7 +318,7 @@ const AboutMe = () => {
                   <img style={{ width: '40px', height: '40px' }} src={github} alt="github-svg" />
                 </div>
 
-                {/* social links */}
+                {/* social as */}
 
                 <div className='p-0 col-lg-6 skills-svg mt-md-5 mt-lg-0 links-section'>
 
@@ -373,7 +371,7 @@ const AboutMe = () => {
         {/* ------------------------------footer-------------------------------------------- */}
         <Footer />
 
-      </section>
+      </motion.section>
     </>
   )
 }

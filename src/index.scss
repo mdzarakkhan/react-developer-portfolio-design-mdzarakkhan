@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap');
+
+
 
 @import './Sass/variables';
 @import './Sass/mixins.scss';
 
 * {
-    font-family: Poppins, Helvetica, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -47,7 +50,7 @@ body {
         margin: 0;
         border-radius: 20px;
         max-width: 100%;
-        
+
 
     }
 
@@ -65,7 +68,7 @@ a {
     border-top: 2px solid rgb(241, 241, 241);
     border-bottom: 2px solid rgb(241, 241, 241);
     margin-bottom: 3rem;
-    background-color: #FCFCFC;    
+    background-color: #FCFCFC;
 }
 
 
@@ -131,21 +134,28 @@ a {
 
 
 p {
-    color: #7c7c7c;
-    font-size: 13.5px;
-    line-height: 22px;
+    color: #1F2937;
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    margin: 0;
 }
 
 h1 {
     font-size: 48px;
     color: #333333;
     font-weight: 600;
+    font-family: 'Poppins';
+
 }
+
 
 h2 {
     font-size: 21px;
     color: #333333;
     font-weight: 600;
+    font-family: 'Poppins';
+    margin-bottom: 0;
 }
 
 h4 {
@@ -158,17 +168,17 @@ h4 {
     background-color: $secondary-color;
     border-color: $secondary-color;
     color: white;
-    border-radius: 50px;
+    border-radius: 8px;
     padding: 10px 25px 10px 25px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
     margin-left: 1rem;
+    line-height: 1;
 
 
     &:hover {
         background-color: white;
         color: #4e4e4e;
-        font-weight: 500;
         border-color: $secondary-color;
 
     }
@@ -190,8 +200,10 @@ h4 {
     border-color: $secondary-color;
     padding: 10px 25px 10px 25px;
     color: #4e4e4e;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
+    border-radius: 8px;
+    line-height: 1;
 
 
 
@@ -216,4 +228,8 @@ i {
 
 section {
     margin-top: 2rem;
+}
+
+.author-img {
+    border-radius: 100% !important;
 }

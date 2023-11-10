@@ -7,14 +7,14 @@ const Header = () => {
     return (
         <>
 
-            <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+            <nav className="navbar navbar-expand-lg navbar-light bg-transparent ">
                 <div className="container">
 
                     {/* logo */}
                     <Link className="navbar-brand" to="/">
                         <span className='md'>MD</span>
-                        <span className='zarak '> Zarak</span>
-                        <span className='khan'> Khan</span>
+                        <span className='zarak '> Zarak Khan</span>
+
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -27,8 +27,7 @@ const Header = () => {
                         <div className="offcanvas-header text bg-white border-bottom">
                             <Link id="offcanvasNavbarLabel" className="navbar-brand offcanvas-title" to="/">
                                 <span className='md'>MD</span>
-                                <span className='zarak '> Zarak</span>
-                                <span className='khan'> Khan</span>
+                                <span className='zarak '> Zarak Khan</span>
                             </Link>
 
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -55,18 +54,31 @@ const Header = () => {
                                     </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link" to="/blog" >
+                                    <a className="nav-link" href="https://mdzarakkhan.me/blog" >
                                         <span className="link-name">Blog</span>
-                                    </NavLink>
+                                    </a>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink className="nav-link" to="/contact" >
-                                        <span className="link-name">Contact</span>
+                                        <span className="link-name desktop-btn">Contact</span>
+
+                                        <span className="link-name mobile-btn">Contact</span>
                                     </NavLink>
                                 </li>
 
                             </ul>
 
+                            {/* custom fiverr upwork and linkedin buttons for mobile only */}
+                            <div className='mobile-social-btns text-center'>
+                                <a href='https://www.fiverr.com/md_zarak_khan'>
+                                    <button id='fiverr-btn' className="btn secondary-button">Fiverr</button>
+                                </a>
+
+                                <a href='https://www.upwork.com/freelancers/~0182fd065637dfe6a4'>
+                                    <button id='fiverr-btn' className="btn secondary-button">Upwork</button>
+                                </a>
+                            </div>
+                            {/* ended custom fiverr upwork and linkedin buttons for mobile only*/}
                         </div>
                     </div>
                 </div>

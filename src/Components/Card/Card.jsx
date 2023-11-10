@@ -19,12 +19,12 @@ const Card = (props) => {
 
                     <div className="plan-description specs">
 
-                        <i className="fa-solid fa-circle-notch" style={{ color:'#4C9196'}}></i> {props.line1}<br />
-                        <i className="fa-solid fa-circle-notch" style={{ color: '#4C9196' }}></i> {props.line2}<br />
-                        <i className="fa-solid fa-circle-notch" style={{ color: '#4C9196' }}></i> {props.line3}<br />
-                        <i className="fa-solid fa-circle-notch" style={{ color: '#4C9196' }}></i> {props.line4}<br />
-                        <i className="fa-solid fa-circle-notch" style={{ color: '#4C9196' }}></i> {props.line5}<br />
-                        <i className="fa-solid fa-circle-notch" style={{ color: '#4C9196' }}></i> {props.line6}<br />
+                        <i className="fa-solid fa-circle-notch" style={{ color:'#10b981'}}></i> {props.line1}<br />
+                        <i className="fa-solid fa-circle-notch" style={{ color: '#10b981' }}></i> {props.line2}<br />
+                        <i className="fa-solid fa-circle-notch" style={{ color: '#10b981' }}></i> {props.line3}<br />
+                        <i className="fa-solid fa-circle-notch" style={{ color: '#10b981' }}></i> {props.line4}<br />
+                        <i className="fa-solid fa-circle-notch" style={{ color: '#10b981' }}></i> {props.line5}<br />
+                        <i className="fa-solid fa-circle-notch" style={{ color: '#10b981' }}></i> {props.line6}<br />
 
                         
                     </div>

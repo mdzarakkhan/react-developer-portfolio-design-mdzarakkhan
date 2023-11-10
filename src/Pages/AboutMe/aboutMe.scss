@@ -1,8 +1,8 @@
- @import '../Sass/variables';
- @import '../Sass/mixins.scss';
+ @import '../../Sass/variables';
+ @import '../../Sass/mixins.scss';
 
  #main-section {
-   
+
 
 
 
@@ -50,6 +50,12 @@
 
 
              .about-content {
+
+                .type-writer{
+                    @include extra_small_devices{
+                        text-align: center;
+                    }
+                }
                  .name {
                      @include large_devices_laptops {
                          font-size: 48px;
@@ -91,24 +97,26 @@
              margin-top: 4.5rem;
          }
 
-         // --------------------------------what i do ------------------------------------------
-         #section-what-i-do {
+         // --------------------------------services section ------------------------------------------
+         #section-services {
 
-
-
+             background-color: $secondary-color;
+             padding: 15px;
+             border-radius: 10px;
 
              .icon-box {
-                 h4 {
-                     margin-left: 1.2rem;
+
+                 background-color: white;
+                 border-radius: 8px;
+                 &:hover{
+                    background-color: $primary-color;
+                    transition: ease-in-out 0.5s;
                  }
 
-                 p {
-                     margin-left: 2.5rem;
-                 }
              }
 
              .icon-box i {
-                 font-size: 18px;
+                 font-size: 25px;
 
              }
          }
@@ -132,8 +140,8 @@
                  }
 
                  @include extra_small_devices {
-                     width: 25px !important;
-                     height: 25px !important;
+                     width: 28px !important;
+                     height: 28px !important;
                  }
              }
 

@@ -1,10 +1,8 @@
 import React from 'react';
-import Header from '../Components/Header';
 import './resume.scss';
-import Timeline from '../Components/Timeline';
-import wordpress from '../assets/svg/wordpress.svg';
-import coding from '../assets/svg/coding.svg';
-import Footer from '../Components/Footer';
+import { Header, Timeline, Footer, Breadcrumb } from '../../Components/index.js';
+import wordpress from '../../assets/svg/wordpress.svg';
+import coding from '../../assets/svg/coding.svg';
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
 
@@ -34,24 +32,11 @@ const Resume = () => {
         </div>
 
         {/* -------------------------------------breadcrumb---------------------------------------- */}
-        <motion.div className="container-fluid contact-container"
-          initial={{ opacity: 0, scale: 0.8 }} // Initial styles
-          animate={{ opacity: 1, scale: 1 }}   // Animation styles
-          transition={{ duration: 0.8 }}       // Animation duration
 
-        >
-          <div className="container">
-            <div className="row">
-              <div className='col-lg-6 col-md-6 col-sm-12'>
-                <h1 className='contact' style={{ fontSize: '42px' }}>Resume</h1>
-              </div>
-
-              <div className='col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end'>
-                <p>4+ Years of Experience</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <Breadcrumb
+          page_name='Resume'
+          description='4+ Years of Experience'
+        />
 
         {/* -------------------------------------page---------------------------------------- */}
 
@@ -102,7 +87,7 @@ const Resume = () => {
                     />
                   </div>
 
-                  
+
                 </div>
 
                 {/* ----------------------------------experience timeline------------------------------------- */}
@@ -164,7 +149,7 @@ const Resume = () => {
                       <div style={{ paddingLeft: '2rem' }} className='inner-2 col-lg-10 col-md-10 col-sm-10 mt-3 '>
                         <h4>Web Designer (WordPress)</h4>
                         <h4 style={{ fontWeight: '400', fontSize: '14px' }}>Softhat IT Solutions</h4>
-                        <p>7 Months</p>
+                        <p className='mb-2'>7 Months</p>
                       </div>
                     </div>
 
@@ -180,9 +165,10 @@ const Resume = () => {
                       <div style={{ paddingLeft: '2rem' }} className='inner-2 col-lg-10 col-md-10 col-sm-10 mt-3 '>
                         <h4>Web Designer & Developer</h4>
                         <h4 style={{ fontWeight: '400', fontSize: '14px' }}>CodePrisma Software Company</h4>
-                        <p>7 Months</p>
+                        <p className='mb-2'>7 Months</p>
                       </div>
                     </div>
+
 
                   </a>
                 </div>
@@ -193,6 +179,7 @@ const Resume = () => {
         </motion.div>
         <Footer />
       </section >
+
     </>
 
   )

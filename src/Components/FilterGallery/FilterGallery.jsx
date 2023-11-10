@@ -16,21 +16,25 @@ const FilterGallery = () => {
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/overbrains.com",
 
-            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/momnme.pk",
+            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/anyayang.com",
 
-            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/mdzarakkhan-portfolio-2",
+            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/momnme.pk",
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/agrindtool.com",
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/davidleesbtq.com",
-
-            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/fimelen.ch",
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/giosyt.in",
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/nurangi.com",
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/dreamacake.com",
+
+            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/mdzarakkhan-portfolio-2",
+            
+            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/fimelen.ch",
+
+
         ],
 
         Ecommerce: [
@@ -53,6 +57,8 @@ const FilterGallery = () => {
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/mdzarakkhan-portfolio",
 
             "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/mdzarakkhan-portfolio-2",
+
+            "https://res.cloudinary.com/dxgj0uw2x/image/upload/f_auto,q_auto/v1/mdzarakkhan.me/Images/Website-Designs/anyayang.com"
 
         ],
 

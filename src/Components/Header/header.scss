@@ -1,0 +1,204 @@
+@import '../../sass/mixins.scss';
+@import '../../Sass/variables';
+
+
+
+
+.navbar-brand {
+
+    .md {
+        height: 40px;
+        width: 40px;
+        line-height: 35px;
+        background-color: $secondary-color;
+        color: white;
+        border-radius: 100%;
+        text-align: center;
+        padding: 10px 7px 10px 7px;
+        font-weight: 700;
+
+    }
+
+    .zarak {
+        font-weight: 700;
+        color: #4e4e4e;
+        font-family: 'Poppins';
+        font-size: 22px;
+        text-decoration: underline;
+        text-decoration-color: $secondary-color;
+    }
+
+    @include extra_small_devices {
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+.navbar {
+    margin-top: 35px;
+
+    
+   
+
+    @include extra_small_devices {
+        padding: 5px;
+        margin-top: 30px !important;
+    }
+
+    .sidebar {
+        @include extra_small_devices {
+            background-color: #ffffff;
+            width: 80%;
+
+        }
+    }
+
+    @include extra_small_devices {
+        margin-top: 10px;
+    }
+
+    .navbar-toggler {
+
+        border: 0px solid rgb(211, 211, 211);
+        background-color: $secondary-color;
+
+       
+
+
+
+        &:focus {
+            border: 0px solid rgb(211, 211, 211);
+            box-shadow: none !important;
+        }
+    }
+
+    .offcanvas-body {
+
+        .navbar-nav {
+
+            @include extra_small_devices {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                margin-top: 30%;
+
+            }
+
+            .nav-item {
+
+                padding-left: 2.1rem;
+
+                .active {
+                    color: $secondary-color!important;
+                }
+
+                @include extra_small_devices {
+                    padding-top: 20px;
+                }
+
+
+                .nav-link {
+                    font-size: 15px;
+                    font-weight: 400;
+                    font-family: 'Poppins';
+                    color: #000000;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
+
+
+                }
+
+                .link-name {
+                    @include extra_small_devices {
+                        font-size: 16px;
+
+
+                    }
+                }
+
+                // contact button css
+
+                .desktop-btn {
+                    background-color: $secondary-color;
+                    margin-left: 0rem;
+                    color: white;
+                    border-radius: 8px;
+                    padding: 10px 25px 10px 25px;
+                    font-weight: 500;
+
+                    &:hover {
+                        background-color: #0dac77;
+                    }
+
+                }
+
+                @include large_devices_laptops {
+                    .desktop-btn {
+                        display: initial !important;
+                    }
+
+                    .mobile-btn {
+                        display: none;
+                    }
+                }
+
+                @include medium_devices_tablets {
+                    .desktop-btn {
+                        display: none;
+                    }
+                }
+
+                @include small_devices {
+                    .desktop-btn {
+                        display: none;
+                    }
+                }
+
+                @include extra_small_devices {
+                    .mobile-btn {
+                        display: block;
+                    }
+
+                    .desktop-btn {
+                        display: none;
+                    }
+                }
+
+                // contact button css ended
+            }
+        }
+
+        .mobile-social-btns {
+            @include extra_small_devices{
+                margin-top: 7rem;
+            }
+
+            @include large_devices_laptops {
+                #fiverr-btn {
+                    display: none;
+                }
+            }
+
+
+
+            @include medium_devices_tablets {
+                #fiverr-btn {
+                    display: none;
+                }
+            }
+
+            @include small_devices {
+                #fiverr-btn {
+                    display: none;
+                }
+            }
+
+            @include extra_small_devices {
+                #fiverr-btn {
+                        display: initial;
+                    }
+            }
+        }
+    }
+}

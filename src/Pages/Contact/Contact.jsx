@@ -1,24 +1,41 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './contact.scss';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
-import github from '../assets/svg/github.svg';
-import fiverr from '../assets/svg/fiverr.svg';
-import upwork from '../assets/svg/upwork.svg';
-import linkedin from '../assets/svg/linkedin.svg';
-import twitter from '../assets/svg/twitter.svg';
-import whatsapp from '../assets/svg/whatsapp.svg';
-import facebook from '../assets/svg/facebook.svg';
-import instagram from '../assets/svg/instagram.svg';
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
+import { Header, Footer, Breadcrumb } from '../../Components/index.js';
+import {github, fiverr, upwork, linkedin, twitter, whatsapp, facebook, instagram} from '../../assets/svg/index.js';
 import { Helmet } from "react-helmet";
-import { motion } from 'framer-motion';
 
 
 
 
 const Contact = () => {
 
- 
+  // /* -------------------------------------email receiving code-------------------------------------- */ 
+
+  const form = useRef();
+  const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_57952qd', 'template_koh31w6', form.current, 'fiw4LinZlL_fNAMbz')
+      .then((result) => {
+        setSubmissionStatus("success");
+        setSubmissionMessage("Your email has been received.");
+      })
+      .catch((error) => {
+        setSubmissionStatus("error");
+        setSubmissionMessage("Sending Failed. Please contact the owner via whatsapp given below");
+      });
+
+    e.target.reset();
+  };
+
+  const onChange = (value) => {
+    console.log("Captcha value:", value);
+  }
 
   // /* -------------------------------------page content---------------------------------------- */ 
 
@@ -49,24 +66,10 @@ const Contact = () => {
 
         {/* -------------------------------------breadcrumb---------------------------------------- */}
 
-        <motion.div className="container-fluid contact-container"
-          initial={{ opacity: 0, scale: 0.8 }} // Initial styles
-          animate={{ opacity: 1, scale: 1 }}   // Animation styles
-          transition={{ duration: 0.8 }}       // Animation duration
-
-        >
-          <div className="container">
-            <div className="row">
-              <div className='col-lg-6 col-md-6 col-sm-12'>
-                <h1 className='contact' style={{ fontSize: '42px' }}>Contact</h1>
-              </div>
-
-              <div className='col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end'>
-                <p>Get in Touch</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <Breadcrumb
+          page_name='Contact'
+          description='Get in Touch'
+        />
 
         {/* -------------------------------------page container---------------------------------------- */}
         <div className='container page-container'>
@@ -105,19 +108,19 @@ const Contact = () => {
                   <div className='icon-box'>
                     <i className="fa-solid fa-mobile-screen"></i>
                     <h4 className='d-inline-block'>+92 3149011559</h4>
-                    <p>Call or Whatsapp any time.</p>
+                    <p style={{fontSize:'15px', marginBottom:'1rem'}}>Call or Whatsapp any time.</p>
                   </div>
 
                   <div className='icon-box'>
                     <i className="fa-solid fa-location-dot"></i>
                     <h4 className='d-inline-block'>Mardan, Pakistan</h4>
-                    <p>Muhallah Pordal Street #18 Abad Par Hoti Mardan</p>
+                    <p style={{ fontSize: '15px', marginBottom: '1rem' }}>Muhallah Pordal Street #18 Abad Par Hoti Mardan</p>
                   </div>
 
                   <div className='icon-box'>
                     <i className="fa-regular fa-envelope"></i>
                     <h4 className='d-inline-block'>mdzarakkhan@gmail.com</h4>
-                    <p>Email me anytime 24/7 active.</p>
+                    <p style={{ fontSize: '15px', marginBottom: '1rem' }}>Email me anytime 24/7 active.</p>
                   </div>
                 </div>
 
@@ -127,7 +130,7 @@ const Contact = () => {
                   <div className='block-title mt-sm-3 mt-lg-0 mt-md-0 what-i-do'>
                     <h2>How Can I Help You?</h2>
                   </div>
-                  <form >
+                  <form ref={form} onSubmit={sendEmail}>
                     <div className="form-outline">
                       <input type="text" name='user_name' id="form3Example1" className="form-control" placeholder='Full Name' required />
                       <label className="form-label" htmlFor="form3Example1"></label>
@@ -142,7 +145,18 @@ const Contact = () => {
                     </div>
                     <div>
 
-                      
+                      {/* Display success and error messages */}
+                      {submissionStatus === 'success' && (
+                        <p className="success-message">{submissionMessage}</p>
+                      )}
+
+                      {submissionStatus === 'error' && (
+                        <p className="error-message">{submissionMessage}</p>
+                      )}
+                      <ReCAPTCHA style={{ marginBottom: '0.6rem', marginTop: '-0.6rem' }}
+                        sitekey="6Lc8aHYnAAAAAEmbcLhc7rYzoF6qqO-sfAvlp6hV"
+                        onChange={onChange}
+                      />
                       <button type="submit" className="btn secondary-button">
                         Send Email
                         <i className="fa-regular fa-paper-plane"></i>
@@ -187,7 +201,7 @@ const Contact = () => {
                     <img style={{ width: '38px', height: '38px' }} src={facebook} alt="facebook-svg" />
                   </a>
 
-                  <a href="https://www.instagram.com/Mdzarakkhan/" target='_blank' rel="noreferrer">
+                  <a href="https://www.instagram.com/mdzarakkhan/" target='_blank' rel="noreferrer">
                     <img style={{ width: '38px', height: '38px' }} src={instagram} alt="instagram-svg" />
                   </a>
 
